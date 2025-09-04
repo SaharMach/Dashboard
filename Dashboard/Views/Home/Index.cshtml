@@ -1,0 +1,52 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+<div class="container py-5">
+    <h2 class="text-center mb-5 fw-bold">Welcome to Your Dashboard</h2>
+
+    <div class="row g-4 justify-content-center">
+        <!-- Invoices App -->
+        <div class="col-md-4">
+            <div class="card shadow-lg border-0 h-100 text-center rounded-4">
+                <div class="card-body p-4">
+                    <div class="mb-3 text-primary">
+                        <i class="bi bi-receipt fs-1"></i>
+                    </div>
+                    <h5 class="card-title fw-bold">Invoices App</h5>
+                    <p class="card-text text-muted">Easily upload, analyze and send invoices.</p>
+                    <a href="/Invoices" class="btn btn-primary rounded-pill px-4 mt-3">Go to Invoices</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- User Management -->
+        <div class="col-md-4">
+            <div class="card shadow-lg border-0 h-100 text-center rounded-4">
+                <div class="card-body p-4">
+                    <div class="mb-3 text-success">
+                        <i class="bi bi-people fs-1"></i>
+                    </div>
+                    <h5 class="card-title fw-bold">User Management</h5>
+                    <p class="card-text text-muted">Manage users and profiles.</p>
+                    <a href="/Users" class="btn btn-primary rounded-pill px-4 mt-3">Go to Users</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Q&A -->
+        <div class="col-md-4">
+            <div class="card shadow-lg border-0 h-100 text-center rounded-4">
+                <div class="card-body p-4">
+                    <div class="mb-3 text-warning">
+                        <i class="bi bi-question-circle fs-1"></i>
+                    </div>
+                    <h5 class="card-title fw-bold">Q&A</h5>
+                    <p class="card-text text-muted">Get answers to your questions.</p>
+                    <a href="/QA" class="btn btn-primary rounded-pill px-4 mt-3">Go to Q&A</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

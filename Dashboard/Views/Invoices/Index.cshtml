@@ -1,0 +1,24 @@
+﻿@{
+    ViewData["Title"] = "Invoices";
+}
+
+
+<div class="container my-4" dir="rtl">
+
+    <form id="invoice-upload-form" enctype="multipart/form-data" class="mb-4">
+        <div class="mb-3">
+            <label for="invoiceFile" class="form-label">בחר קובץ PDF</label>
+            <input type="file" class="form-control" id="invoiceFile" name="invoiceFile" accept="application/pdf" required />
+        </div>
+        <button type="submit" class="btn btn-primary">העלה ונתח</button>
+        <div id="fileError" class="text-danger mt-2" >
+            ניתן להעלות רק קבצי PDF.
+        </div>
+    </form>
+
+    <div id="invoice-result"></div>
+</div>
+@section Scripts {
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/js/invoices.js"></script>
+}

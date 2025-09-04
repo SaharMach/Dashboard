@@ -1,0 +1,46 @@
+﻿@{
+    ViewData["Title"] = "Users";
+}
+
+<div class="main-container">
+
+    <div class="form-wrapper">
+
+        <form id="add-user-form" enctype="multipart/form-data">
+            <div>
+                <input type="text" id="name" placeholder="Name" required class="form-control" />
+            </div>
+            <div>
+                <input type="email" id="email" placeholder="Email" required class="form-control" />
+            </div>
+            <div>
+                <input type="date" id="date-of-birth" required class="form-control" />
+            </div>
+            <div>
+                <input type="file" id="image" accept="image/*" required class="form-control" />
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+
+    <table class="table">
+        <thead class="table-dark">
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Image</th>
+                <th scope="col">Name</th>
+                <th scope="col">Email</th>
+                <th scope="col">Date of birth</th>
+            </tr>
+        </thead>
+        <tbody id="users-table-body">
+        </tbody>
+        <button class="add-btn btn btn-primary" id="add-user-btn">Add user</button>
+    </table>
+
+</div>
+
+@section Scripts {
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/js/users.js"></script>
+}

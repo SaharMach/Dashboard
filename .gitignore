@@ -1,0 +1,29 @@
+ Build results
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+build/
+bin/
+obj/
+
+# Visual Studio
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Logs
+*.log
+
+# Secrets
+appsettings.json
+appsettings.Development.json
+.env
+
+# Others
+*.dbmdl
+*.bak
+*.ldf
+*.ndf

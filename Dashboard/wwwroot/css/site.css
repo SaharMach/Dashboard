@@ -1,0 +1,33 @@
+.main-container {
+    margin: 0 auto;
+    height: 100vh;
+    position: relative;
+
+    table
+    {
+        border: 1px solid #ccc;
+    }
+    
+
+    .add-btn {
+        width: 150px;
+        height: 60px;
+        position: absolute; 
+        right: calc(50% - 75px);
+        bottom:100px;
+    }
+
+
+    .form-wrapper {
+        padding: 20px;
+        max-width: 600px;
+        margin: 0 auto;
+        border: 1px solid #ccc;
+        border-radius: 20px;
+        form {
+             display: flex;
+             flex-direction: column;
+             gap: 30px
+        }
+    }
+}
