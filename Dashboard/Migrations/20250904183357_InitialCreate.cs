@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace UsersMgmt.Migrations
+namespace Dashboard.Migrations
 {
     /// <inheritdoc />
     public partial class InitialCreate : Migration
@@ -15,15 +15,16 @@ namespace UsersMgmt.Migrations
                 name: "Users",
                 columns: table => new
                 {
-                    ImageData = table.Column<byte[]>(type: "varbinary(900)", nullable: false),
-                    Id = table.Column<int>(type: "int", nullable: false),
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    ImageData = table.Column<byte[]>(type: "varbinary(max)", nullable: false),
                     Name = table.Column<string>(type: "nvarchar(25)", maxLength: 25, nullable: false),
                     Email = table.Column<string>(type: "nvarchar(40)", maxLength: 40, nullable: false),
                     DateOfBirth = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Users", x => x.ImageData);
+                    table.PrimaryKey("PK_Users", x => x.Id);
                 });
         }
 

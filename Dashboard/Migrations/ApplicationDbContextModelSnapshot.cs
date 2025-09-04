@@ -8,7 +8,7 @@ using UsersMgmt.Data;
 
 #nullable disable
 
-namespace UsersMgmt.Migrations
+namespace Dashboard.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
     partial class ApplicationDbContextModelSnapshot : ModelSnapshot
@@ -24,8 +24,11 @@ namespace UsersMgmt.Migrations
 
             modelBuilder.Entity("UsersMgmt.Entities.User", b =>
                 {
-                    b.Property<byte[]>("ImageData")
-                        .HasColumnType("varbinary(900)");
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<DateTime>("DateOfBirth")
                         .HasColumnType("datetime2");
@@ -35,15 +38,16 @@ namespace UsersMgmt.Migrations
                         .HasMaxLength(40)
                         .HasColumnType("nvarchar(40)");
 
-                    b.Property<int>("Id")
-                        .HasColumnType("int");
+                    b.Property<byte[]>("ImageData")
+                        .IsRequired()
+                        .HasColumnType("varbinary(max)");
 
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasMaxLength(25)
                         .HasColumnType("nvarchar(25)");
 
-                    b.HasKey("ImageData");
+                    b.HasKey("Id");
 
                     b.ToTable("Users");
                 });
